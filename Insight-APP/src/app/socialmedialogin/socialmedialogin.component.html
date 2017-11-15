@@ -1,0 +1,21 @@
+<div *ngIf="!user" class="card text-center">
+    <div class="card">
+        <h3><strong>SignIn using</strong> </h3>
+        <br>
+        <button (click)="signInWithGoogle()" class="btn btn-danger">    Google+    </button>
+        <br>
+        <br>
+        <button class="btn btn-primary" (click)="signInWithFB()"><span class="fa fa-facebook"></span>Facebook</button>
+    </div>
+</div>
+<div *ngIf="user" class="card text-center">
+    <div class="card"></div>
+    <img class="card-img-top img-responsive photo" src="{{ user.photoUrl }}">
+    <div class="card">
+        <h4 class="card-title">{{ user.name }}</h4>
+        <p class="card-text">{{ user.email }}</p>
+    </div>
+    <div class="card-block">
+        <button class="btn btn-danger" (click)="signOut()" target="_top">Sign out</button>
+    </div>
+</div>

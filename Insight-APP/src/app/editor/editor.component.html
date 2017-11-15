@@ -1,0 +1,24 @@
+<!-- <quill-editor class="form-control" [options]="editorOptions" (blur)="onEditorBlured($event)" (focus)="onEditorFocused($event)" (ready)="onEditorCreated($event)" (change)="onContentChanged($event)"></quill-editor> -->
+
+<!-- <quill-editor>
+
+</quill-editor>
+ -->
+ 
+<div class="container">
+ <quill-editor [(ngModel)]="editorContent" [options]="editorOptions" (blur)="onEditorBlured($event)" (focus)="onEditorFocused($event)" (ready)="onEditorCreated($event)" (change)="onContentChanged($event)"></quill-editor>
+ 
+ <!-- <div class="ql-editor preview" [innerHTML]="editorContent"></div> -->
+ <br>
+ <button type="button" class="btn btn-primary" id="postbutton" (click)="save(editorContent)" routerLink="/dashboard/pre">Post</button>
+</div>
+ 
+ <!-- <form>
+     <div class="form-group">
+         <label for="content">Content</label>
+         <input #Content type="text" class="form-control" id="content" placeholder="Enter Content">
+ 
+         <button type="submit" class="btn btn-primary" (click)='save(Content.value)' routerLink="/pre">Submit</button>
+ 
+     </div>
+ </form> -->

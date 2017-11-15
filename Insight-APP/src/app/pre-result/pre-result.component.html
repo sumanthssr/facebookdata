@@ -1,0 +1,20 @@
+<body>
+        
+  <div class="container">
+      <h2>Results</h2>
+      <table class="table table-bordered">
+          <thead>
+              <tr>
+                  <th>Content</th>
+              </tr>
+          </thead>
+          <tbody *ngFor="let con of content">
+              <tr>
+                  <td>{{con.value}}</td>
+                  <button (click)="edit(con.id)" routerLink='/ed'>Edit</button>
+              </tr>
+          </tbody>
+      </table>
+      <!-- <button routerLink='/ed'> Edit </button> -->
+  </div>
+</body>

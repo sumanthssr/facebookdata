@@ -1,0 +1,17 @@
+@media screen and (max-width:375px){
+    #image{
+        display: none;
+    }
+    
+}
+.navbar-inverse{
+    background-color: #11131A;
+    padding: 5px;
+  
+}
+@media(min-width: 1024px){
+    #image{
+        padding-right: 100px;
+       
+    }
+}

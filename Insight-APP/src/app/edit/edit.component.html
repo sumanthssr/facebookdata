@@ -1,0 +1,21 @@
+<!-- <quill-editor [(ngModel)]="this.content"></quill-editor> -->
+
+
+<body>
+        
+  <div class="container">
+      <h2>Results</h2>
+      <table class="table table-bordered">
+          <thead>
+              <tr>
+                  <th>Content</th>
+              </tr>
+          </thead>
+          <tbody *ngFor="let con of content">
+              <tr>
+                  <quill-editor [(ngModel)]="con.content"></quill-editor>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</body>
